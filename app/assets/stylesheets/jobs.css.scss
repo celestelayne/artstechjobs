@@ -1,0 +1,47 @@
+// Place all the styles related to the jobs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	background: #a71b3e;
+	// color: #f2f2f2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Montserrat', sans-serif;
+	color: #f2f2f2;
+	letter-spacing: .05em;
+}
+
+a {
+	color: #efaaca;
+	text-decoration: none;
+}
+
+// Left Panel
+select#Job_Function {
+	border: none;
+  border-radius: 0;
+  overflow: hidden;
+  line-height: 1.2em;
+  color: #999;
+  box-sizing: border-box;
+  background-color: #fff;
+  -webkit-appearance: button;
+  // height: 48px;
+  width: 80%;
+  padding: 10px;
+}
+
+.grid-item { 
+	float: left;
+	width: 25%;
+	height: 0;
+	padding-bottom: 25%;
+	// margin: 1px;
+	background: #e6e5e4;
+}
+
+.grid-item:hover {
+	background: green;
+}

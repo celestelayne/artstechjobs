@@ -1,0 +1,16 @@
+<div class="grid">
+	<% @jobs.each do |job| %>
+		<div class="grid-item">
+			<h2><%= link_to job.title, job.url %></h2>
+			<p><%= job.company %></p>
+			<p><%= job.city %></p>
+			<p>
+				<%= link_to "Edit job", edit_job_path(job.id) %>
+				<%= link_to "Delete job", job, method: :delete %>
+			</p>
+		</div>
+	<% end %>
+</div>
+<p>There are currently <%= @jobs.length %> jobs on the board.</p>
+<p><%= link_to "Add a new job", new_job_path %></p>
+<p><%= paginate @jobs %></p>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ArtsxTech Jobs Board</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', 'https://fonts.googleapis.com/css?family=Montserrat:400,700'%>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<div class="container-fluid">
+		<div class="row">
+		  <div class="col-xs-6 col-md-3">
+				<h1>Arts x Tech <br/>Jobs Board</h1>
+				<select name="Job_Function" id="Job_Function">
+					<option value="" disabled="disabled" selected="selected">Please select job type</option>
+					<option value="">All Jobs</option>
+					<option value="">Design</option>
+					<option value="">Digital Marketing</option>
+					<option value="">Technology</option>
+				</select>
+		  </div>
+		  <div class="col-xs-12 col-md-9">
+				<%= yield %>
+		  </div>
+		</div>
+	</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.js"></script>
+</body>
+</html>

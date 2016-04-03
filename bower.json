@@ -1,0 +1,28 @@
+{
+  "name": "artsjobsboard",
+  "version": "0.0.0",
+  "authors": [
+    "Celeste Layne <layne.celeste@gmail.com>"
+  ],
+  "description": "Arts and culture in tech jobs board",
+  "keywords": [
+    "art",
+    "technology",
+    "design",
+    "digital",
+    "marketing"
+  ],
+  "license": "MIT",
+  "homepage": "artstechjobs.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "isotope": "~2.2.2"
+  }
+}
