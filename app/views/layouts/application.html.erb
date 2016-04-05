@@ -4,7 +4,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ArtsxTech Jobs Board</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'application', 'https://fonts.googleapis.com/css?family=Montserrat:400,700'%>
+  <%= stylesheet_link_tag    'application', 'https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic'%>
+  <%= stylesheet_link_tag    'application', 'https://fonts.googleapis.com/css?family=Oswald:400,700,300'%>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -12,8 +13,10 @@
 
 	<div class="container-fluid">
 		<div class="row">
-		  <div class="col-xs-6 col-md-3">
-				<h1>Arts x Tech <br/>Jobs Board</h1>
+		  <aside class="left col-xs-6 col-md-3">
+				<h1 class="header-title">ARTSxTECH</h1>
+				<h4 class="header-subtitle">Arts &amp; Technology Job Board</h4>
+				<p>All the best design, technology and digital marketing jobs &mdash; in one place.</p>
 				<select name="Job_Function" id="Job_Function">
 					<option value="" disabled="disabled" selected="selected">Please select job type</option>
 					<option value="">All Jobs</option>
@@ -21,10 +24,18 @@
 					<option value="">Digital Marketing</option>
 					<option value="">Technology</option>
 				</select>
-		  </div>
-		  <div class="col-xs-12 col-md-9">
+				<article>
+					<h4>Eligibility</h4>
+					<ul>
+						<li>The job must be at an arts or cultural organization.</li>
+						<li>The main focus of the position should be digital.</li>
+						<li>To get the position posted, just tweet at @layne_celeste with details.</li>
+					</ul>
+				</article>
+		  </aside>
+		  <section class="right col-xs-12 col-md-9">
 				<%= yield %>
-		  </div>
+		  </section>
 		</div>
 	</div>
 

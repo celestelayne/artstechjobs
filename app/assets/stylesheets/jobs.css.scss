@@ -2,20 +2,59 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-	background: #a71b3e;
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body,
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: #FFEB3B;
+	font-family: 'Lora', serif;
 	// color: #f2f2f2;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Montserrat', sans-serif;
+aside {
+	height: 100%;
+	// background: #FFEB3B;
+}
+
+section {
+	height: 100%;
+	background: #000000;
 	color: #f2f2f2;
+}
+
+
+
+h2, h3, h4, h5, h6 {
+	font-family: 'Oswald', serif;
+	color: #141414;
 	letter-spacing: .05em;
+	line-height: 1em;
+}
+
+h1 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 4.5em;
+	font-weight: 700;
+  line-height: 1.1471em;
+  padding-top: 0.3824em;
 }
 
 a {
-	color: #efaaca;
+	// color: #efaaca;
+	color: #FFEB3B;
 	text-decoration: none;
+}
+
+select {
+	margin-top: 26px;
+	margin-bottom: 26px;
 }
 
 // Left Panel
@@ -33,15 +72,65 @@ select#Job_Function {
   padding: 10px;
 }
 
-.grid-item { 
+.left {
+  // background: #FFEB3B;
+    // padding: 20px;
+  // height: 100%;
+    // overflow: auto;
+}
+
+.right {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.job {
+	padding: 10px;
+	margin: 2px;
+}
+
+.grid-item {
+	position: relative;
 	float: left;
-	width: 25%;
+	width: 24.5%;
 	height: 0;
 	padding-bottom: 25%;
 	// margin: 1px;
-	background: #e6e5e4;
+	// color: #f2f2f2;
+	border: 1px solid #f2f2f2;
 }
 
 .grid-item:hover {
-	background: green;
+	background: #FFEB3B;
+}
+
+footer {
+  position: absolute;
+  bottom: 5px;	
+}
+
+.grid-company {
+	color: #f2f2f2;
+}
+
+.header-title {
+	position: relative;
+  padding-bottom: 26px;
+  margin-bottom: 26px;
+	text-decoration: uppercase;
+}
+
+.header-title:after {
+	content: "";
+  width: 100%;
+  max-width: 104px;
+  height: 10px;
+  background: #000000;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.header-subtitle {
+	font-weight: 700;
 }

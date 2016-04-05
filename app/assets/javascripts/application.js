@@ -29,4 +29,7 @@ $(document).on("ready", function(){
 		var filterValue = $(this).attr('value');
 		$('.grid').isotope({ filter: filterValue });
 	});
+
+
+	
 });
