@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-
+# tell which version of ruby to use
+ruby '2.2.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
@@ -38,9 +39,18 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'simple_form'
 gem 'kaminari'
 
+gem 'rails_12factor', group: :production
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-theme'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'annotate'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
