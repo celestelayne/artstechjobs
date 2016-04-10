@@ -12,20 +12,41 @@
 <body>
 
 	<div class="container-fluid">
-		<div class="row">
+		<div class="fill row">
 		  <aside class="left col-xs-6 col-md-3">
-				<h1 class="header-title">ARTSxTECH</h1>
+		  	<nav>
+		  		<ul class="nav navbar navbar-default" >
+		  			<% if @current_user %>
+
+			  			<li class="dropdown">
+			  				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b>
+            		</a>
+			  			
+				  			<ul class="dropdown-menu">
+				  				<li><%= link_to "Profile", user_path(current_user) %></li>
+				  				<li><%= link_to "Settings", edit_user_path(current_user)%></li>
+				  				<li class="divider"></li>
+				  				<li class="user-buttons"><%= link_to "Log Out", logout_path, menthod: "delete" %></li>
+				  			</ul>
+			  			</li>
+			  		<% else %>
+			  			<li class="user-buttons"><%= link_to "Log In", login_path, class: "btn btn-lg btn-primary" %></li>
+			  			<li class="user-buttons"><%= link_to "Sign Up", new_user_path, class: "btn btn-lg btn-primary" %></li>
+		  			<% end %>
+		  		</ul>
+		  	</nav>
+				<h1 class="header-title"><a href="/">ARTSxTECH</a></h1>
 				<h4 class="header-subtitle">Arts &amp; Technology Job Board</h4>
-				<p>All the best design, technology and digital marketing jobs &mdash; in one place.</p>
+				<p class="lead">All the best design, digital marketing and technology jobs &mdash; in one place.</p>
 				<select name="Job_Function" id="Job_Function">
-					<option value="" disabled="disabled" selected="selected">Please select job type</option>
-					<option value="">All Jobs</option>
-					<option value="">Design</option>
-					<option value="">Digital Marketing</option>
-					<option value="">Technology</option>
+					<option value="" selected="selected">Please select job type</option>
+					<option value="All">All Jobs</option>
+					<option value="Design">Design</option>
+					<option value="Digital Marketing">Digital Marketing</option>
+					<option value="Technology">Technology</option>
 				</select>
 				<article>
-					<h4>Eligibility</h4>
+					<h4 class="header-subtitle">Eligibility</h4>
 					<ul>
 						<li>The job must be at an arts or cultural organization.</li>
 						<li>The main focus of the position should be digital.</li>
@@ -34,6 +55,13 @@
 				</article>
 		  </aside>
 		  <section class="right col-xs-12 col-md-9">
+				
+				<% flash.each do |name, msg| %>
+					<p>
+						<small>	<%= name.capitalize %>: <%= msg %> </small> 
+					</p>
+				<% end %>
+
 				<%= yield %>
 		  </section>
 		</div>

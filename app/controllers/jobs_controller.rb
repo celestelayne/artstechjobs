@@ -1,4 +1,6 @@
 class JobsController < ApplicationController
+  before_action :current_user
+
   def index
     if params[:tag]
       @jobs = Job.tagged_with(params[:tag])
@@ -51,7 +53,7 @@ class JobsController < ApplicationController
   end
 
   private
-
+  
   def job_params
     params.require(:job).permit(:title, :company, :city, :url, :all_tags)
   end

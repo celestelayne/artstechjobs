@@ -16,8 +16,34 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
-$(document).on("ready", function(){
-	console.log('Sanity Check: main.js is working!');
+$(window).load( function(){
+	
+	// console.log('Sanity Check: main.js is working!');
+	
+
+	function checkStatus() {
+		console.log('Sanity Check: main.js is working!');
+		var jobCard = $('.job');
+		var check = $('.grid-item');
+		if (check == null) {
+			setTimeout("checkStatus()", 100);
+		} else {
+			var gridTagNames = $('.grid-tags > a');
+			for ( var i = 0; i < gridTagNames.length; i++){
+				var gridTag = gridTagNames[i].text;
+				// var gridTagLowerCase = gridTag.split(' ').join('').toLowerCase();
+				console.log(i, gridTag)
+			}
+			for ( var i = 0; i < jobCard.length; i++){
+				jobCard.addClass(gridTag);
+			}
+			
+			// console.log(gridTagLowerCase)
+			// console.log(check)
+		}
+
+	}
+
 	$('.grid').isotope({
 	  // options
 	  itemSelector: '.grid-item',
@@ -26,10 +52,9 @@ $(document).on("ready", function(){
 
 	$('#city-select').on('change', function(){
 		var jobFunction = $('#Job_Function').val().toLowerCase();
-		var filterValue = $(this).attr('value');
+
 		$('.grid').isotope({ filter: filterValue });
 	});
 
-
-	
+	checkStatus();
 });
