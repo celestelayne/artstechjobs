@@ -38,6 +38,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'simple_form'
 gem 'kaminari'
+gem 'masonry-rails', '~> 0.2.4'
 
 gem 'rails_12factor', group: :production
 

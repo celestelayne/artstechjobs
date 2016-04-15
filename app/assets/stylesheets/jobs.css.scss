@@ -53,7 +53,6 @@ h1 {
 }
 
 a {
-	// color: #efaaca;
 	color: #FFEB3B;
 	text-decoration: none;
 }
@@ -73,7 +72,6 @@ select#Job_Function {
   box-sizing: border-box;
   background-color: #fff;
   -webkit-appearance: button;
-  // height: 48px;
   width: 80%;
   padding: 10px;
 }
@@ -82,12 +80,10 @@ aside.left {
   // background: #FFEB3B;
     // padding: 20px;
   // height: 100%;
-  // overflow: auto;
+  overflow: auto;
 }
 
 section.right {
-	// padding-left: 0;
-	// padding-top: 20px;
 	min-height: 100%;
 }
 
@@ -107,17 +103,26 @@ section.right {
 	margin: 2px;
 }
 
+.isotope:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid-sizer,
+.grid-item { width: 24.5%; }
+
 .grid-item {
 	position: relative;
 	float: left;
-	width: 24.5%;
+	// width: 24.5%;
 	height: 0;
 	padding-bottom: 25%;
 	border: 1px solid #f2f2f2;
 }
 
 .grid-item:hover {
-	background: #FFEB3B;
+	border: 0.5px solid #FFEB3B;
 }
 
 .grid-header {

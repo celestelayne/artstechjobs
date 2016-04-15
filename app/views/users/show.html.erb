@@ -1,6 +1,15 @@
 <div class="row">
 	<div class="col-md-6 col-md-offset-3">
-		<div><%= image_tag @user.gravatar_url %></div>
+		<div><%= image_tag gravatar_url(@user) %></div>
 		<h1>Welcome, <%= @user.first_name %> </h1>
+
+    <p>
+      <strong>Email:</strong>
+      <%= @user.email %>
+    </p>
+
+		<% if @user == @current_user %>
+    	<a class="button small radius" href="<%= edit_user_path(@current_user) %>">Edit My Account</a>
+    <% end %>
 	</div>
 </div>

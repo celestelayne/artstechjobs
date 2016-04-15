@@ -23,8 +23,8 @@
             		</a>
 			  			
 				  			<ul class="dropdown-menu">
-				  				<li><%= link_to "Profile", user_path(current_user) %></li>
-				  				<li><%= link_to "Settings", edit_user_path(current_user)%></li>
+				  				<li><%= link_to "Profile", user_path(@current_user) %></li>
+				  				<li><%= link_to "Settings", edit_user_path(@current_user)%></li>
 				  				<li class="divider"></li>
 				  				<li class="user-buttons"><%= link_to "Log Out", logout_path, menthod: "delete" %></li>
 				  			</ul>
@@ -40,10 +40,10 @@
 				<p class="lead">All the best design, digital marketing and technology jobs &mdash; in one place.</p>
 				<select name="Job_Function" id="Job_Function">
 					<option value="" selected="selected">Please select job type</option>
-					<option value="All">All Jobs</option>
-					<option value="Design">Design</option>
-					<option value="Digital Marketing">Digital Marketing</option>
-					<option value="Technology">Technology</option>
+					<option value="*">All Jobs</option>
+					<option value=".Design">Design</option>
+					<option value=".Digital">Digital Marketing</option>
+					<option value=".Technology">Technology</option>
 				</select>
 				<article>
 					<h4 class="header-subtitle">Eligibility</h4>

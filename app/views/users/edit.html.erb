@@ -1,5 +1,14 @@
 <div class="row">
 	<div class="col-md-6 col-md-offset-3">
+	  <div class="gravatar_edit">
+	  	<%= image_tag gravatar_url(@user) %>
+	  	<a href="http://gravatar.com/emails" target="_blank">change</a>
+	  </div>
+  </div>
+</div>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+
 	<h1>Edit Profile</h1>
 		<%= simple_form_for @user, html: { class: "form-horizontal" } do |f| %>
 		  <%= f.input :first_name, label: "First Name" %>
@@ -9,9 +18,5 @@
 		  <%= f.button :submit %>
 		<% end %>
 
-	  <div class="gravatar_edit">
-    	<%= gravatar_for @user %>
-    	<a href="http://gravatar.com/emails" target="_blank">change</a>
-    </div>
 	</div>
 </div>

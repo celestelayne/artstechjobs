@@ -23,6 +23,13 @@
     "tests"
   ],
   "dependencies": {
-    "isotope": "~2.2.2"
-  }
+    "isotope": "~2.2.2",
+    "masonry": "~3.3.2"
+  },
+  "overrides": {
+    "masonry": {
+      "main": ["./dist/masonry.pkgd.js"],
+      "dependencies": {}
+    }
+ } 
 }
