@@ -14,27 +14,6 @@
 	<div class="container-fluid">
 		<div class="fill row">
 		  <aside class="left col-xs-6 col-md-3">
-		  	<nav>
-		  		<ul class="nav navbar navbar-default" >
-		  			<% if @current_user %>
-
-			  			<li class="dropdown">
-			  				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b>
-            		</a>
-			  			
-				  			<ul class="dropdown-menu">
-				  				<li><%= link_to "Profile", user_path(@current_user) %></li>
-				  				<li><%= link_to "Settings", edit_user_path(@current_user)%></li>
-				  				<li class="divider"></li>
-				  				<li class="user-buttons"><%= link_to "Log Out", logout_path, menthod: "delete" %></li>
-				  			</ul>
-			  			</li>
-			  		<% else %>
-			  			<li class="user-buttons"><%= link_to "Log In", login_path, class: "btn btn-lg btn-primary" %></li>
-			  			<li class="user-buttons"><%= link_to "Sign Up", new_user_path, class: "btn btn-lg btn-primary" %></li>
-		  			<% end %>
-		  		</ul>
-		  	</nav>
 				<h1 class="header-title"><a href="/">ARTSxTECH</a></h1>
 				<h4 class="header-subtitle">Arts &amp; Technology Job Board</h4>
 				<p class="lead">All the best design, digital marketing and technology jobs &mdash; in one place.</p>
@@ -53,6 +32,28 @@
 						<li>To get the position posted, just tweet at @layne_celeste with details.</li>
 					</ul>
 				</article>
+		  	<nav>
+		  		<ul class="nav navbar navbar-default" >
+		  			<% if @current_user %>
+
+			  			<li class="dropdown">
+			  				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b>
+            		</a>
+			  			
+				  			<ul class="dropdown-menu">
+				  				<li><%= link_to "Add Job", new_job_path(@current_user) %></li>
+				  				<li><%= link_to "Profile", user_path(@current_user) %></li>
+				  				<li><%= link_to "Settings", edit_user_path(@current_user) %></li>
+				  				<li class="divider"></li>
+				  				<li class="user-buttons"><%= link_to "Log Out", logout_path, method: "delete" %></li>
+				  			</ul>
+			  			</li>
+			  		<% else %>
+			  			<li class="user-buttons btn-1"><%= link_to "Log In", login_path, class: "btn btn-lg btn-primary" %></li>
+			  			<li class="user-buttons btn-1"><%= link_to "Sign Up", new_user_path, class: "btn btn-lg btn-primary" %></li>
+		  			<% end %>
+		  		</ul>
+		  	</nav>
 		  </aside>
 		  <section class="right col-xs-12 col-md-9">
 				

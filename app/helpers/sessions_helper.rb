@@ -20,10 +20,4 @@ module SessionsHelper
 		@current_user = session[:user_id] = nil
 	end
 
-	# def redirect_unauthenticated
-	# 	unless logged_in?
-	# 		return redirect_to login_path
-	# 	end
-	# end
-
 end

@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-		resources :jobs, :users 
-
 		root "jobs#index"
-	  
-	  # get '/signup' => 'users#new'
+
+	  resources :jobs, :users
+
+	  get '/signup' => 'users#new'
 	  get '/login' => 'sessions#new'
 	  post '/sessions' => 'sessions#create'
-	  get '/logout' => 'sessions#destroy'
+	  delete '/logout' => 'sessions#destroy'
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
     

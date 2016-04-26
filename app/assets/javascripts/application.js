@@ -23,7 +23,8 @@
 //= require_tree .
 
 $(function(){
-
+	console.log("this works");
+	
 	$('#masonry-container').masonry({
 	  itemSelector: '.grid-item',
 	  // set columnWidth a fraction of the container width
