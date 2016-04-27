@@ -21,7 +21,7 @@ class Job < ActiveRecord::Base
 	has_many :taggings, :dependent => :destroy
 	has_many :tags, through: :taggings
 
-  belongs_to :user, :dependent => :destroy
+  belongs_to :user
   validates :user_id, presence: true
   
 	def all_tags=(names)

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 		root "jobs#index"
 
 	  resources :jobs, :users
-
+	  
 	  get '/signup' => 'users#new'
 	  get '/login' => 'sessions#new'
 	  post '/sessions' => 'sessions#create'

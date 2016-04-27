@@ -17,7 +17,8 @@
 							</li>
 							<li class="pull-right">
 								<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-								<%= link_to "Delete job", job_path(job.id), method: :destroy, data: { confirm: 'Are you sure?' } %>
+
+								<%= link_to "Delete job", job_path(job.id), :method => :delete, data: { confirm: 'Are you sure?' } %>
 							</li>
 						</ul>
 					<% end %>
