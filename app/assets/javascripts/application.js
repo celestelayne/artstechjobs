@@ -25,6 +25,48 @@
 $(function(){
 	console.log("this works");
 	
+	// MASONRY INFINITE SCROLLING
+
+	var $container = $('#masonry-container');
+
+  $container.imagesLoaded(function(){
+    $container.masonry({
+      itemSelector: '.grid-item'
+      // columnWidth: 100
+    });
+  });
+
+  $container.infinitescroll({
+  	navSelector  : '#page-nav',
+  	nextSelector : '#page-nav a',
+  	itemSelector : '.grid-item',
+  	loading: {
+        finishedMsg: 'No more pages to load.'
+        // img: 'http://i.imgur.com/6RMhx.gif'
+      }
+  },
+  	function( newElements ) {
+      // hide new items while they are loading
+      var $newElems = $( newElements ).css({ opacity: 0 });
+      // ensure that images load before adding to masonry layout
+      $newElems.imagesLoaded(function(){
+        // show elems now they're ready
+        $newElems.animate({ opacity: 1 });
+        $container.masonry( 'appended', $newElems, true );
+  	});
+	});
+
+	// Pause Infinite Scroll
+	$(window).unbind('.infscr');
+
+	// Resume Infinite Scroll
+	$('#page-nav a').click(function(){
+		$container.infinitescroll('retrieve');
+		return false;
+	});
+
+	// MASONRY GRID
+
 	$('#masonry-container').masonry({
 	  itemSelector: '.grid-item',
 	  // set columnWidth a fraction of the container width

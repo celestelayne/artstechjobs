@@ -2,11 +2,13 @@ class JobsController < ApplicationController
   before_action :current_user, only: [:index, :new, :create, :edit, :update, :show, :destroy]
 
   def index
-    if params[:tag]
-      @jobs = Job.tagged_with(params[:tag])
-    else
-    	@jobs = Job.page(params[:page]).per(8)
-    end
+    @jobs = Job.all
+    @jobs = Job.all.order(created_at: :desc)
+    # if params[:tag]
+      # @jobs = Job.tagged_with(params[:tag])
+    # else
+    	# @jobs = Job.page(params[:page]).per(8)
+    # end
   end
 
   def new
@@ -48,7 +50,6 @@ class JobsController < ApplicationController
 
   def destroy
     @job = current_user.jobs.find(params[:id])
-    # current_user.jobs.destroy @job
     @job.destroy
     flash[:success] = "Job deleted."
 
