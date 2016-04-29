@@ -18,7 +18,8 @@ html {
 }
 
 .container-fluid {
-    height:100%;
+  height: 100%;
+  margin-bottom: 20px;
 }
 
 .fill { 
@@ -29,12 +30,14 @@ html {
 aside {
 	color: #000000;
 	overflow: auto;
+	display: block;
 }
 
 section {
 	background: #000000;
 	color: #f2f2f2;
-	overflow: auto;
+	display: block;
+	// overflow: auto;
 }
 
 h2, h3, h4, h5, h6 {
@@ -95,6 +98,10 @@ section.right {
 	height: 100%;
 	padding-left: 0;
 	padding-right: 0;
+}
+
+#masonry-container {
+	background: #000000;
 }
 
 .btn, .btn-lg, .btn-primary {
@@ -165,6 +172,7 @@ section.right {
 .grid-item {
 	position: relative;
 	float: left;
+	overflow: hidden;
 	// width: 24.5%;
 	height: 0;
 	padding-bottom: 25%;
@@ -174,6 +182,10 @@ section.right {
 .grid-item:hover {
 	border: 0.5px solid #FFEB3B;
 }
+
+// .grid-item.Design { background: #F00; background: hsl(   0, 100%, 50%); }
+// .grid-item.Technology { background: #F80; background: hsl(  36, 100%, 50%); }
+// .grid-item.Digital { background: #08F; background: hsl( 216, 100%, 50%); }
 
 .grid-header {
 	margin-top: 5px;

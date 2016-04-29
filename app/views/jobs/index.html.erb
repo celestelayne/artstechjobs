@@ -1,13 +1,13 @@
-<div id="masonry-container" class="grid">
+<div id="masonry-container" class="grid transitions-enabled infinite-scrolling isotope clearfix">
 		<%= render :partial => 'jobs', :order => ('jobs desc') %>
 </div>
 
 <div class="section-footer">
-	<nav id="page-nav">
-  <a href="../pages/2.html"></a>
-</nav>
-
+	<ul class="footer-nav">
+		<li class="pull-left"><%= paginate @jobs %></li>
+	</ul>
 </div>
+
 
 
 

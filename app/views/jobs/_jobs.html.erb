@@ -1,6 +1,6 @@
 	<% @jobs.each do |job| %>
-		<div class="job grid-item grid-sizer <%= job.tags[0].name %>">
-			<span><small>Posted <em><%= time_ago_in_words(job.created_at) %></em> ago</small></span>
+		<div class="job grid-item isotope-item grid-sizer <%= job.tags[0].name %>">
+			<span class="grid-date"><small>Posted <em><%= time_ago_in_words(job.created_at) %></em> ago</small></span>
 			<h3 class="grid-header"><%= link_to job.title, job.url %></h3>
 			<h4 class="grid-company"><%= job.company %></h4>
 			<p class="grid-city"><%= job.city %></p>

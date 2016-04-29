@@ -3,12 +3,11 @@ class JobsController < ApplicationController
 
   def index
     @jobs = Job.all
-    @jobs = Job.all.order(created_at: :desc)
-    # if params[:tag]
-      # @jobs = Job.tagged_with(params[:tag])
-    # else
-    	# @jobs = Job.page(params[:page]).per(8)
-    # end
+    if params[:tag]
+      @jobs = Job.tagged_with(params[:tag]).order(created_at: :desc)
+    else
+    	@jobs = Job.page(params[:page]).per(8).order(created_at: :desc)
+    end
   end
 
   def new
