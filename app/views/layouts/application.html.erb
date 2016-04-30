@@ -13,10 +13,11 @@
 
 	<div class="container-fluid">
 		<div class="fill row">
-		  <aside class="left col-xs-6 col-md-3">
+		  <aside class="left col-xs-12 col-md-3">
 				<h1 class="header-title"><a href="/">ARTSxTECH</a></h1>
 				<h4 class="header-subtitle">Arts &amp; Technology Job Board</h4>
 				<p class="lead">All the best design, digital marketing and technology jobs &mdash; in one place.</p>
+				
 				<select name="Job_Function" id="Job_Function">
 					<option value="" selected="selected">Please select job type</option>
 					<option value="*">All Jobs</option>
@@ -24,6 +25,7 @@
 					<option value=".Digital">Digital Marketing</option>
 					<option value=".Technology">Technology</option>
 				</select>
+
 				<article>
 					<h4 class="header-subtitle">Eligibility</h4>
 					<ul>
@@ -36,7 +38,8 @@
 						<span><%= link_to "Add a new job", new_job_path %></span>
 					</p>
 				</article>
-		  	<nav>
+
+		  	<nav style="display:none;">
 		  		<ul class="nav navbar navbar-default" >
 		  			<% if @current_user %>
 
@@ -59,6 +62,7 @@
 		  		</ul>
 		  	</nav>
 		  </aside>
+
 		  <section id="content" class="right col-xs-12 col-md-9">
 				
 				<% flash.each do |name, msg| %>

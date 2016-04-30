@@ -6,7 +6,7 @@ class JobsController < ApplicationController
     if params[:tag]
       @jobs = Job.tagged_with(params[:tag]).order(created_at: :desc)
     else
-    	@jobs = Job.page(params[:page]).per(8).order(created_at: :desc)
+    	@jobs = Job.page(params[:page]).per(12).order(created_at: :desc)
     end
   end
 
