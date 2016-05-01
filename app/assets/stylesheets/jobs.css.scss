@@ -55,19 +55,14 @@ h1 {
   padding-top: 0.3824em;
 }
 
-a, a:hover {
-	// color: #FFEB3B;
+a {
 	color: #f2f2f2;
 	text-decoration: none;
 }
 
-// ul {
-// 	display: inline;
-// }
-
-// li {
-// 	list-style-type: none;
-// }
+a:hover {
+	text-decoration: none;
+}
 
 select {
 	margin-top: 26px;
@@ -181,7 +176,7 @@ section.right {
 }
 
 .grid-item:hover {
-	border: 0.5px solid #FFEB3B;
+	// border: 0.5px solid #FFEB3B;
 	background-color: #FFEB3B;
 	color: #000;
 }
@@ -198,7 +193,8 @@ h3.grid-header:hover,
 h4.grid-company:hover {
 	// border: 0.5px solid #FFEB3B;
 	// background-color: #FFEB3B;
-	color: #000;
+	// color: #000;
+	text-decoration: none;
 }
 
 footer {

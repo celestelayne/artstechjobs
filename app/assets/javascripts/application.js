@@ -22,8 +22,19 @@
 //= require isotope/jquery.isotope
 //= require_tree .
 
-$(function(){
+$(document).ready(function(){
 	console.log("this works");
+
+	$content = $('.grid-item');
+	// $header = $('.grid-header').css("color", "#F2F2F2");
+	// $company = $('.grid-company').css("color", "#F2F2F2");
+	$content.mouseover(function(){
+		$( this ).find( ".grid-header a" ).css("color", "#000");
+		$( this ).find( "h4" ).css("color", "#000");
+	}).mouseout(function(){
+		$( this ).find( ".grid-header a" ).css("color", "#F2F2F2");
+		$( this ).find( "h4" ).css("color", "#F2F2F2");
+	})
 
 	var $container = $('#masonry-container');
 
