@@ -17,7 +17,7 @@
 				<h1 class="header-title"><a href="/">ARTSxTECH</a></h1>
 				<h4 class="header-subtitle">Arts &amp; Technology Job Board</h4>
 				<p class="lead">All the best design, digital marketing and technology jobs &mdash; in one place.</p>
-
+				<p style="contact-info">To get a position posted, just tweet at <a style="color: #000;" href="https://twitter.com/layne_celeste">@layne_celeste</a> with details and I'll add you.</p>
 				<select name="Job_Function" id="Job_Function">
 					<option value="" selected="selected">Please select job type</option>
 					<option value="*">All Jobs</option>
@@ -31,18 +31,17 @@
 					<ul>
 						<li>The job must be at an arts or cultural organization.</li>
 						<li>The main focus of the position should be digital.</li>
-						<li>To get the position posted, just tweet at @layne_celeste with details.</li>
+						<!-- <li>To get the position posted, just tweet at <a href="https://twitter.com/layne_celeste">@layne_celeste</a> with details.</li> -->
 					</ul>
 				</article>
 
-		  	<nav >
-		  		<p>
-						<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-						<span><%= link_to "Add a new job", new_job_path %></span>
-					</p>
+		  	<nav style="display:none;">
 		  		<ul class="nav navbar navbar-default" >
 		  			<% if @current_user %>
-
+							<li>
+								<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+								<span><%= link_to "Add a new job", new_job_path %></span>
+							</li>
 			  			<li class="dropdown">
 			  				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b>
             		</a>

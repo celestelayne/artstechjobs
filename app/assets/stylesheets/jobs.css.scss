@@ -65,8 +65,8 @@ a:hover {
 }
 
 select {
-	margin-top: 26px;
-	// margin-bottom: 26px;
+	margin-top: 10px;
+	margin-bottom: 20px;
 }
 
 // Left Panel
@@ -243,16 +243,46 @@ footer {
   //   background: red;
   // }
 
-  aside {
+  aside.left {
+		height: auto;
+		padding-bottom: 40px;
+  }
 
+  article {
+  	display: none;
   }
 
   section {
-
+		// margin: 5px; 
   }
+	
+	.header-title {
+		font-size: 3em;
+	}
 
   .grid-sizer,
 	.grid-item { width: 50%; }
 
-	.grid-item { padding-bottom: 50%; }
+	.grid-item { 
+		padding-bottom: 50%;
+		line-height: 0.8em;
+	}
+	
+	.grid-date {
+		font-size: 0.75em;
+		font-style: italic;
+	}
+
+	.grid-header { 
+		font-size: 1em;
+		text-transform: uppercase;
+		letter-spacing: 0.125em;
+	 }
+
+	.grid-company { 
+		font-size: 0.9em;
+		letter-spacing: 0.125em;
+	}
+	.grid-city { font-size: 0.9em; }
+	.grid-tags { font-size: 0.75em; }
 }
