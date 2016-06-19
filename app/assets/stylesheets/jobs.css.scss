@@ -100,6 +100,11 @@ section.right {
 	background: #000000;
 }
 
+#main-nav {
+	background-color: #FFEB3B;
+	border: none;
+}
+
 .btn, .btn-lg, .btn-primary {
 	border-radius: 0;
 }
@@ -198,6 +203,7 @@ h4.grid-company:hover {
 }
 
 footer {
+	width: 100%;
   position: absolute;
   bottom: 5px;	
 }
@@ -206,7 +212,11 @@ footer {
 	color: #f2f2f2;
 }
 
-.edit-buttons { list-style-type: none; }
+.edit-buttons {
+	width: 100%;
+	list-style-type: none;
+	display: inline;
+}
 
 .header-title,
 .header-title:hover {
