@@ -49,7 +49,7 @@ h2, h3, h4, h5, h6 {
 
 h1 {
 	font-family: 'Oswald', sans-serif;
-	font-size: 4.5em;
+	font-size: 3em;
 	font-weight: 700;
   line-height: 1.1471em;
   padding-top: 0.3824em;
@@ -206,6 +206,8 @@ footer {
 	color: #f2f2f2;
 }
 
+.edit-buttons { list-style-type: none; }
+
 .header-title,
 .header-title:hover {
 	position: relative;
@@ -245,7 +247,7 @@ footer {
 
   aside.left {
 		height: auto;
-		padding-bottom: 40px;
+		padding: 30px;
   }
 
   article {
@@ -254,6 +256,12 @@ footer {
 
   section {
 		// margin: 5px; 
+  }
+
+  footer {
+  	width: 100%;
+  	font-size: 0.75em;
+		// padding-right: 10px;
   }
 	
 	.header-title {
@@ -265,7 +273,7 @@ footer {
 
 	.grid-item { 
 		padding-bottom: 50%;
-		line-height: 0.8em;
+		line-height: 0.6em;
 	}
 	
 	.grid-date {
@@ -280,9 +288,15 @@ footer {
 	 }
 
 	.grid-company { 
-		font-size: 0.9em;
+		font-size: 0.8em;
 		letter-spacing: 0.125em;
 	}
-	.grid-city { font-size: 0.9em; }
+	.grid-city { font-size: 0.8em; }
 	.grid-tags { font-size: 0.75em; }
+	.edit-buttons { 
+		width: 100%;
+		padding-left: 10%;
+		list-style-type: none;
+		display: inline;
+	}
 }
