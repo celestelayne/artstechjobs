@@ -1,11 +1,12 @@
 <div class="row" style="padding: 30px;">
 	<div class="col-md-6 col-md-offset-3">
-		<h1>Log In</h1>
+		<h1 class="form-title">Log In</h1>
+		<h5 class="header-subtitle">Please log in to your user account.</h5>
 		<%= simple_form_for @user, url: "/sessions", method: "post" do |f| %>
 		  <%= f.input :email, placeholder: "user@domain.com" %>
 		  <%= f.input :password %>
 		  <%= f.button :button, "Log In" %>
 		<% end %>
-		<p>New user? <%= link_to "Sign up now!", new_user_path %></p>
+		<p class="new-user-text">New user? <%= link_to "Sign up now!", new_user_path %></p>
 	</div>
 </div>

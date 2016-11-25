@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 # tell which version of ruby to use
 ruby '2.2.1'
 
@@ -32,7 +32,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
-
+gem 'typekit-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

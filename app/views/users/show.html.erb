@@ -1,5 +1,6 @@
 <div class="row" style="padding: 30px;">
-	<div class="col-md-6 col-md-offset-3">
+	<!-- <div class="col-md-6 col-md-offset-3"> -->
+  <div class="col-md-4">
 		<div><%= image_tag gravatar_url(@user) %></div>
 		<h1>Welcome, <%= @user.first_name %> </h1>
 
@@ -9,7 +10,24 @@
     </p>
 
 		<% if @user == @current_user %>
-    	<a class="button small radius" href="<%= edit_user_path(@current_user) %>">Edit My Account</a>
+    	<div><a class="button small radius" href="<%= edit_user_path(@current_user) %>">Edit My Account</a></div>
+      <div><span><%= link_to "Add a new job", new_job_path %></span></div>
     <% end %>
 	</div>
+
+  <div class="col-md-8">
+    <% if @user.jobs.any? %>
+      <h3>Jobs Posted (<%= @user.jobs.count %>)</h3>
+      <ul class="list-group">
+        <% @user.jobs.each do |job| %>
+          <p class="grid-header"><%= link_to job.title, job.url %>
+            <span class="timestamp">
+                Posted <%= time_ago_in_words(job.created_at) %> ago.
+              </span>
+          </p>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+
 </div>
